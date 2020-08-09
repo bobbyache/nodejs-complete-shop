@@ -12,6 +12,7 @@ const shopRoutes = require('./routes/shop');
 
 // 3rd party middleware - Parse form body.
 app.use(bodyParser.urlencoded({ extended: false}));
+app.use(express.static(path.join(rootDir, 'public')));
 
 // Your middleware
 app.use((req, res, next) => {
